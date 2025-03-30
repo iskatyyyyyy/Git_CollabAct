@@ -37,36 +37,10 @@ def update_contact(name, new_contact, new_email):
     if name in contacts:
         contacts[name] = {"contact": new_contact, "email": new_email}
         save_contacts(contacts)
-        print(f"\nContact '{name}' updated successfully.")
-    else:
-        print(f"\nContact '{name}' not found.")
 
 def display_contacts():
-    """Display all contacts in a formatted table."""
-    if not contacts:
-        print("\nNo contacts available.")
-        return
-
-    print("\nContact List")
-    print("=" * 45)
-    print(f"{'Name':<20}{'Contact':<15}{'Email'}")
-    print("-" * 45)
-    
-    for name, info in contacts.items():
-        print(f"{name:<20}{info['contact']:<15}{info['email']}")
-
-    print("=" * 45)
-
-def show_menu():
-    """Display the menu options."""
-    print("\nContact Book")
-    print("=" * 25)
-    print("1. Add Contact")
-    print("2. Update Contact")
-    print("3. Delete Contact")
-    print("4. View Contacts")
-    print("5. Exit")
-    print("=" * 25)
+    """Display all contacts."""
+    print(json.dumps(contacts, indent=4) if contacts else "No contacts available.")
 
 if __name__ == "__main__":
     while True:
