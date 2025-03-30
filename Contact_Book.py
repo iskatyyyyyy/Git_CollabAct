@@ -35,7 +35,7 @@ def delete_contact(name):
 def update_contact(name, new_contact, new_email):
     """Update an existing contact."""
     if name in contacts:
-<<<<<<< HEAD
+
 #Added a feature where the program will ask for clarification regarding the updates made.
         print(f"\nCurrent Contact Info - Name: {name}, Contact: {contacts[name]['contact']}, Email: {contacts[name]['email']}")
         confirmation = input("Are you sure you want to update this contact? (yes/no): ").strip().lower()
@@ -45,28 +45,20 @@ def update_contact(name, new_contact, new_email):
             print(f"\nContact '{name}' updated successfully.")
         else:
             print("\nUpdate canceled.")
-=======
+
         contacts[name] = {"contact": new_contact, "email": new_email}
         save_contacts(contacts)
         print(f"\nContact '{name}' updated successfully.")
->>>>>>> e47f891 (Updated version of the UI)
-    else:
-        print(f"\nContact '{name}' not found.")
-
+        
 def display_contacts():
-<<<<<<< HEAD
     """Display all contacts."""
     if not contacts:
         print("\nNo contacts available.")
         return
-    
-=======
     """Display all contacts in a formatted table."""
     if not contacts:
         print("\nNo contacts available.")
         return
-
->>>>>>> e47f891 (Updated version of the UI)
     print("\nContact List")
     print("=" * 45)
     print(f"{'Name':<20}{'Contact':<15}{'Email'}")
