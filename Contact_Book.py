@@ -1,9 +1,9 @@
 import json
 import os
 
-# File handling functions
+# File Management
 def load_contacts(filename="contacts.json"):
-    """Load contacts from a file."""
+    """Load MasterContacts."""
     try:
         with open(filename, "r") as file:
             return json.load(file)
@@ -11,7 +11,7 @@ def load_contacts(filename="contacts.json"):
         return {}
 
 def save_contacts(contacts, filename="contacts.json"):
-    """Save contacts to a file."""
+    """Save MasterContacts."""
     with open(filename, "w") as file:
         json.dump(contacts, file, indent=4)
 
@@ -19,7 +19,7 @@ def clear_screen():
     """Clear the screen for better UI readability."""
     os.system("cls" if os.name == "nt" else "clear")
 
-# Core functionalities
+# Core Functionalities
 contacts = load_contacts()
 
 def add_contact(name, contact, email):
