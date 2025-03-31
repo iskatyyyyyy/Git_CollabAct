@@ -72,7 +72,7 @@ def display_contacts():
 
 def show_menu():
     """Display the menu options."""
-    print("\nContact Book")
+    print("\n[X] WELCOME TO MASTERCONTACT! [X]")
     print("=" * 30)
     print("1. Add Contact")
     print("2. Update Contact")
@@ -107,8 +107,10 @@ if __name__ == "__main__":
             display_contacts()
 
         elif choice == '5':
-            print("\nExiting Contact Book. Have a great day!\n")
+            print("\nExiting Master Contact. See you again!\n")
             break
 
         else:
             print("\nInvalid choice! Please enter a number from 1 to 5.")
+
+
